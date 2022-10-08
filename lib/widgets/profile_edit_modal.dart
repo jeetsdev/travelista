@@ -115,13 +115,20 @@ class _ProfileEditState extends State<ProfileEdit> {
               ),
             ],
           ),
+          SizedBox(
+            height: 20,
+          ),
           Align(
             alignment: Alignment.topRight,
-            child: TextButton(
+            child: ElevatedButton(
+              style: ButtonStyle(),
               onPressed: _updateHandler,
               child: Text("Update"),
             ),
-          )
+          ),
+          SizedBox(
+            height: 20,
+          ),
         ],
       ),
     );
