@@ -15,29 +15,36 @@ class DestinationScreen extends StatefulWidget {
 class _DestinationScreenState extends State<DestinationScreen> {
   @override
   Widget build(BuildContext context) {
+    var isLandscape =
+        MediaQuery.of(context).orientation == Orientation.landscape;
     return Scaffold(
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Stack(
             children: [
-              Container(
-                height: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
+              Expanded(
+                child: Container(
+                  height: isLandscape ? 200 : MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
                         color: Colors.black26,
                         offset: Offset(0, 4),
-                        blurRadius: 5),
-                  ],
-                ),
-                child: Hero(
-                  tag: widget.destination.city,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Image(
-                      image: AssetImage(widget.destination.imageUrl),
-                      fit: BoxFit.cover,
+                        blurRadius: 5,
+                      ),
+                    ],
+                  ),
+                  child: Hero(
+                    tag: widget.destination.city,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image(
+                        image: AssetImage(widget.destination.imageUrl),
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                      ),
                     ),
                   ),
                 ),
