@@ -30,8 +30,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: ListView(
           padding: MediaQuery.of(context).viewInsets,
           children: [
+            SizedBox(
+              height: 20,
+            ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
