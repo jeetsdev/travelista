@@ -1,9 +1,4 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:travel_app/main.dart';
 import 'package:travel_app/models/hotel_model.dart';
 
 class ExclusiveHotelCard extends StatelessWidget {
@@ -41,7 +36,7 @@ class ExclusiveHotelCard extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Text(
-                            hotel.name,
+                            hotel.title,
                             style: TextStyle(
                               fontSize: 25,
                               fontWeight: FontWeight.w600,
@@ -51,7 +46,7 @@ class ExclusiveHotelCard extends StatelessWidget {
                             height: 10,
                           ),
                           Text(
-                            hotel.address,
+                            hotel.location,
                             style: TextStyle(
                               fontSize: 15,
                               color: Colors.grey,
@@ -68,7 +63,7 @@ class ExclusiveHotelCard extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Text(
-                            '\$${hotel.price}',
+                            '\$${hotel.rent}',
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w600,
@@ -89,7 +84,7 @@ class ExclusiveHotelCard extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Image(
-                image: AssetImage(hotel.imageUrl),
+                image: NetworkImage(hotel.img),
                 fit: BoxFit.cover,
               ),
             ),
