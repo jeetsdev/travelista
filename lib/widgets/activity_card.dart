@@ -5,7 +5,7 @@ import 'package:travel_app/models/activity_model.dart';
 
 class ActivityCard extends StatelessWidget {
   final Activity activity;
-  ActivityCard(this.activity);
+  const ActivityCard(this.activity, {super.key});
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -13,7 +13,6 @@ class ActivityCard extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 20),
       width: width,
       height: 200,
-      // color: Colors.grey,
       child: Stack(
         alignment: Alignment.centerLeft,
         children: [

@@ -21,7 +21,7 @@ class _BottomBarState extends State<BottomBar> {
     });
   }
 
-  static List<Widget> _widgetOptions = <Widget>[
+  static final List<Widget> _widgetOptions = <Widget>[
     MyHomePage(),
     FindScreen(),
     ProfileScreen(),

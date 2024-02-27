@@ -7,7 +7,7 @@ import 'package:travel_app/widgets/activity_card.dart';
 
 class DestinationScreen extends StatefulWidget {
   final Destination destination;
-  DestinationScreen(this.destination);
+  const DestinationScreen(this.destination, {super.key});
   @override
   State<DestinationScreen> createState() => _DestinationScreenState();
 }
