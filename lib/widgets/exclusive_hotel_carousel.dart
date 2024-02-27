@@ -7,6 +7,7 @@ class ExclusiveHotels extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("In exlcusive hotel lengths is ${hotels.length}");
     return Column(
       children: [
         Padding(
