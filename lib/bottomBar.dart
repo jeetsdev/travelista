@@ -15,7 +15,6 @@ class BottomBar extends StatefulWidget {
 class _BottomBarState extends State<BottomBar> {
   int _selectedNavbarindex = 0;
   void _onTapNavBar(int index) {
-    print(index);
     setState(() {
       _selectedNavbarindex = index;
     });
